@@ -9,6 +9,7 @@ class Keyboard {
   constructor(container) {
     this.container = container;
     this.wrapper = document.createElement('div');
+    this.wrapper.className = 'keyboard';
     this.row = document.createElement('div');
     this.row.className = 'keyboard__row';
     for (let i = 0; i < 5; i += 1) {
