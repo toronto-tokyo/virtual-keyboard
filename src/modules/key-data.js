@@ -7,6 +7,10 @@ const KEYS_DATA = {
       capsShift: '~',
     },
     ru: {
+      lowerCase: 'ё',
+      caps: 'Ё',
+      shift: 'Ё',
+      capsShift: 'ё',
     },
   },
   Digit1: {
@@ -17,6 +21,10 @@ const KEYS_DATA = {
       capsShift: '!',
     },
     ru: {
+      lowerCase: '1',
+      caps: '1',
+      shift: '!',
+      capsShift: '!',
     },
   },
   Digit2: {
@@ -27,6 +35,10 @@ const KEYS_DATA = {
       capsShift: '@',
     },
     ru: {
+      lowerCase: '2',
+      caps: '2',
+      shift: '"',
+      capsShift: '"',
     },
   },
   Digit3: {
@@ -37,6 +49,10 @@ const KEYS_DATA = {
       capsShift: '#',
     },
     ru: {
+      lowerCase: '3',
+      caps: '3',
+      shift: '№',
+      capsShift: '№',
     },
   },
   Digit4: {
@@ -47,6 +63,10 @@ const KEYS_DATA = {
       capsShift: '$',
     },
     ru: {
+      lowerCase: '4',
+      caps: '4',
+      shift: ';',
+      capsShift: ';',
     },
   },
   Digit5: {
@@ -57,6 +77,10 @@ const KEYS_DATA = {
       capsShift: '%',
     },
     ru: {
+      lowerCase: '5',
+      caps: '5',
+      shift: '%',
+      capsShift: '%',
     },
   },
   Digit6: {
@@ -67,6 +91,10 @@ const KEYS_DATA = {
       capsShift: '^',
     },
     ru: {
+      lowerCase: '6',
+      caps: '6',
+      shift: ':',
+      capsShift: ':',
     },
   },
   Digit7: {
@@ -77,6 +105,10 @@ const KEYS_DATA = {
       capsShift: '&',
     },
     ru: {
+      lowerCase: '7',
+      caps: '7',
+      shift: '?',
+      capsShift: '?',
     },
   },
   Digit8: {
@@ -87,6 +119,10 @@ const KEYS_DATA = {
       capsShift: '*',
     },
     ru: {
+      lowerCase: '8',
+      caps: '8',
+      shift: '*',
+      capsShift: '*',
     },
   },
   Digit9: {
@@ -97,6 +133,10 @@ const KEYS_DATA = {
       capsShift: '(',
     },
     ru: {
+      lowerCase: '9',
+      caps: '9',
+      shift: '(',
+      capsShift: '(',
     },
   },
   Digit0: {
@@ -107,6 +147,10 @@ const KEYS_DATA = {
       capsShift: ')',
     },
     ru: {
+      lowerCase: '0',
+      caps: '0',
+      shift: ')',
+      capsShift: ')',
     },
   },
   Minus: {
@@ -117,6 +161,10 @@ const KEYS_DATA = {
       capsShift: '_',
     },
     ru: {
+      lowerCase: '-',
+      caps: '-',
+      shift: '_',
+      capsShift: '_',
     },
   },
   Equal: {
@@ -127,6 +175,10 @@ const KEYS_DATA = {
       capsShift: '+',
     },
     ru: {
+      lowerCase: '=',
+      caps: '=',
+      shift: '+',
+      capsShift: '+',
     },
   },
   Backspace: {
@@ -137,6 +189,10 @@ const KEYS_DATA = {
       capsShift: 'Backspace',
     },
     ru: {
+      lowerCase: 'Backspace',
+      caps: 'Backspace',
+      shift: 'Backspace',
+      capsShift: 'Backspace',
     },
   },
   Tab: {
@@ -147,6 +203,10 @@ const KEYS_DATA = {
       capsShift: 'Tab',
     },
     ru: {
+      lowerCase: 'Tab',
+      caps: 'Tab',
+      shift: 'Tab',
+      capsShift: 'Tab',
     },
   },
   KeyQ: {
@@ -157,6 +217,10 @@ const KEYS_DATA = {
       capsShift: 'q',
     },
     ru: {
+      lowerCase: 'й',
+      caps: 'Й',
+      shift: 'Й',
+      capsShift: 'й',
     },
   },
   KeyW: {
@@ -167,6 +231,10 @@ const KEYS_DATA = {
       capsShift: 'w',
     },
     ru: {
+      lowerCase: 'ц',
+      caps: 'Ц',
+      shift: 'Ц',
+      capsShift: 'ц',
     },
   },
   KeyE: {
@@ -177,6 +245,10 @@ const KEYS_DATA = {
       capsShift: 'e',
     },
     ru: {
+      lowerCase: 'у',
+      caps: 'У',
+      shift: 'У',
+      capsShift: 'У',
     },
   },
   KeyR: {
@@ -187,6 +259,10 @@ const KEYS_DATA = {
       capsShift: 'r',
     },
     ru: {
+      lowerCase: 'к',
+      caps: 'К',
+      shift: 'К',
+      capsShift: 'к',
     },
   },
   KeyT: {
@@ -197,6 +273,10 @@ const KEYS_DATA = {
       capsShift: 't',
     },
     ru: {
+      lowerCase: 'е',
+      caps: 'Е',
+      shift: 'Е',
+      capsShift: 'е',
     },
   },
   KeyY: {
@@ -207,6 +287,10 @@ const KEYS_DATA = {
       capsShift: 'y',
     },
     ru: {
+      lowerCase: 'н',
+      caps: 'Н',
+      shift: 'Н',
+      capsShift: 'н',
     },
   },
   KeyU: {
@@ -217,6 +301,10 @@ const KEYS_DATA = {
       capsShift: 'u',
     },
     ru: {
+      lowerCase: 'г',
+      caps: 'Г',
+      shift: 'Г',
+      capsShift: 'г',
     },
   },
   KeyI: {
@@ -227,6 +315,10 @@ const KEYS_DATA = {
       capsShift: 'i',
     },
     ru: {
+      lowerCase: 'ш',
+      caps: 'Ш',
+      shift: 'Ш',
+      capsShift: 'ш',
     },
   },
   KeyO: {
@@ -237,6 +329,10 @@ const KEYS_DATA = {
       capsShift: 'o',
     },
     ru: {
+      lowerCase: 'щ',
+      caps: 'Щ',
+      shift: 'Щ',
+      capsShift: 'щ',
     },
   },
   KeyP: {
@@ -247,6 +343,10 @@ const KEYS_DATA = {
       capsShift: 'p',
     },
     ru: {
+      lowerCase: 'з',
+      caps: 'З',
+      shift: 'З',
+      capsShift: 'з',
     },
   },
   BracketLeft: {
@@ -257,6 +357,10 @@ const KEYS_DATA = {
       capsShift: '{',
     },
     ru: {
+      lowerCase: 'х',
+      caps: 'Х',
+      shift: 'Х',
+      capsShift: 'х',
     },
   },
   BracketRight: {
@@ -267,6 +371,10 @@ const KEYS_DATA = {
       capsShift: '}',
     },
     ru: {
+      lowerCase: 'ъ',
+      caps: 'Ъ',
+      shift: 'Ъ',
+      capsShift: 'ъ',
     },
   },
   Backslash: {
@@ -277,6 +385,10 @@ const KEYS_DATA = {
       capsShift: '|',
     },
     ru: {
+      lowerCase: '\\',
+      caps: '\\',
+      shift: '/',
+      capsShift: '/',
     },
   },
   Delete: {
@@ -287,7 +399,10 @@ const KEYS_DATA = {
       capsShift: 'Delete',
     },
     ru: {
-      shiftActive: '!',
+      lowerCase: 'Delete',
+      caps: 'Delete',
+      shift: 'Delete',
+      capsShift: 'Delete',
     },
   },
   CapsLock: {
@@ -298,6 +413,10 @@ const KEYS_DATA = {
       capsShift: 'Caps Lock',
     },
     ru: {
+      lowerCase: 'Caps Lock',
+      caps: 'Caps Lock',
+      shift: 'Caps Lock',
+      capsShift: 'Caps Lock',
     },
   },
   KeyA: {
@@ -308,6 +427,10 @@ const KEYS_DATA = {
       capsShift: 'a',
     },
     ru: {
+      lowerCase: 'ф',
+      caps: 'Ф',
+      shift: 'Ф',
+      capsShift: 'ф',
     },
   },
   KeyS: {
@@ -318,6 +441,10 @@ const KEYS_DATA = {
       capsShift: 's',
     },
     ru: {
+      lowerCase: 'ы',
+      caps: 'Ы',
+      shift: 'Ы',
+      capsShift: 'ы',
     },
   },
   KeyD: {
@@ -328,6 +455,10 @@ const KEYS_DATA = {
       capsShift: 'd',
     },
     ru: {
+      lowerCase: 'в',
+      caps: 'В',
+      shift: 'В',
+      capsShift: 'в',
     },
   },
   KeyF: {
@@ -338,6 +469,10 @@ const KEYS_DATA = {
       capsShift: 'f',
     },
     ru: {
+      lowerCase: 'а',
+      caps: 'А',
+      shift: 'А',
+      capsShift: 'а',
     },
   },
   KeyG: {
@@ -348,6 +483,10 @@ const KEYS_DATA = {
       capsShift: 'g',
     },
     ru: {
+      lowerCase: 'п',
+      caps: 'П',
+      shift: 'П',
+      capsShift: 'п',
     },
   },
   KeyH: {
@@ -358,6 +497,10 @@ const KEYS_DATA = {
       capsShift: 'h',
     },
     ru: {
+      lowerCase: 'р',
+      caps: 'Р',
+      shift: 'Р',
+      capsShift: 'р',
     },
   },
   KeyJ: {
@@ -368,6 +511,10 @@ const KEYS_DATA = {
       capsShift: 'j',
     },
     ru: {
+      lowerCase: 'о',
+      caps: 'О',
+      shift: 'О',
+      capsShift: 'о',
     },
   },
   KeyK: {
@@ -378,6 +525,10 @@ const KEYS_DATA = {
       capsShift: 'k',
     },
     ru: {
+      lowerCase: 'л',
+      caps: 'Л',
+      shift: 'Л',
+      capsShift: 'л',
     },
   },
   KeyL: {
@@ -388,6 +539,10 @@ const KEYS_DATA = {
       capsShift: 'l',
     },
     ru: {
+      lowerCase: 'д',
+      caps: 'Д',
+      shift: 'Д',
+      capsShift: 'д',
     },
   },
   Semicolon: {
@@ -398,6 +553,10 @@ const KEYS_DATA = {
       capsShift: ':',
     },
     ru: {
+      lowerCase: 'ж',
+      caps: 'Ж',
+      shift: 'Ж',
+      capsShift: 'ж',
     },
   },
   Quote: {
@@ -408,6 +567,10 @@ const KEYS_DATA = {
       capsShift: '"',
     },
     ru: {
+      lowerCase: 'э',
+      caps: 'Э',
+      shift: 'Э',
+      capsShift: 'э',
     },
   },
   Enter: {
@@ -418,6 +581,10 @@ const KEYS_DATA = {
       capsShift: 'Enter',
     },
     ru: {
+      lowerCase: 'Enter',
+      caps: 'Enter',
+      shift: 'Enter',
+      capsShift: 'Enter',
     },
   },
   ShiftLeft: {
@@ -428,6 +595,10 @@ const KEYS_DATA = {
       capsShift: 'Shift',
     },
     ru: {
+      lowerCase: 'Shift',
+      caps: 'Shift',
+      shift: 'Shift',
+      capsShift: 'Shift',
     },
   },
   KeyZ: {
@@ -438,6 +609,10 @@ const KEYS_DATA = {
       capsShift: 'z',
     },
     ru: {
+      lowerCase: 'я',
+      caps: 'Я',
+      shift: 'Я',
+      capsShift: 'я',
     },
   },
   KeyX: {
@@ -448,6 +623,10 @@ const KEYS_DATA = {
       capsShift: 'x',
     },
     ru: {
+      lowerCase: 'ч',
+      caps: 'Ч',
+      shift: 'Ч',
+      capsShift: 'ч',
     },
   },
   KeyC: {
@@ -458,6 +637,10 @@ const KEYS_DATA = {
       capsShift: 'c',
     },
     ru: {
+      lowerCase: 'с',
+      caps: 'С',
+      shift: 'С',
+      capsShift: 'с',
     },
   },
   KeyV: {
@@ -468,6 +651,10 @@ const KEYS_DATA = {
       capsShift: 'v',
     },
     ru: {
+      lowerCase: 'м',
+      caps: 'М',
+      shift: 'М',
+      capsShift: 'м',
     },
   },
   KeyB: {
@@ -478,6 +665,10 @@ const KEYS_DATA = {
       capsShift: 'b',
     },
     ru: {
+      lowerCase: 'и',
+      caps: 'И',
+      shift: 'И',
+      capsShift: 'и',
     },
   },
   KeyN: {
@@ -488,6 +679,10 @@ const KEYS_DATA = {
       capsShift: 'n',
     },
     ru: {
+      lowerCase: 'т',
+      caps: 'Т',
+      shift: 'Т',
+      capsShift: 'т',
     },
   },
   KeyM: {
@@ -498,6 +693,10 @@ const KEYS_DATA = {
       capsShift: 'm',
     },
     ru: {
+      lowerCase: 'ь',
+      caps: 'Ь',
+      shift: 'Ь',
+      capsShift: 'ь',
     },
   },
   Comma: {
@@ -508,6 +707,10 @@ const KEYS_DATA = {
       capsShift: '<',
     },
     ru: {
+      lowerCase: 'б',
+      caps: 'Б',
+      shift: 'Б',
+      capsShift: 'б',
     },
   },
   Period: {
@@ -518,6 +721,10 @@ const KEYS_DATA = {
       capsShift: '>',
     },
     ru: {
+      lowerCase: 'ю',
+      caps: 'Ю',
+      shift: 'Ю',
+      capsShift: 'ю',
     },
   },
   Slash: {
@@ -528,6 +735,10 @@ const KEYS_DATA = {
       capsShift: '?',
     },
     ru: {
+      lowerCase: '.',
+      caps: '.',
+      shift: ',',
+      capsShift: ',',
     },
   },
   ArrowUp: {
@@ -538,6 +749,10 @@ const KEYS_DATA = {
       capsShift: '&#x25B2;',
     },
     ru: {
+      lowerCase: '&#x25B2;',
+      caps: '&#x25B2;',
+      shift: '&#x25B2;',
+      capsShift: '&#x25B2;',
     },
   },
   ShiftRight: {
@@ -548,6 +763,10 @@ const KEYS_DATA = {
       capsShift: 'Shift',
     },
     ru: {
+      lowerCase: 'Shift',
+      caps: 'Shift',
+      shift: 'Shift',
+      capsShift: 'Shift',
     },
   },
   ControlLeft: {
@@ -558,6 +777,10 @@ const KEYS_DATA = {
       capsShift: 'Ctrl',
     },
     ru: {
+      lowerCase: 'Ctrl',
+      caps: 'Ctrl',
+      shift: 'Ctrl',
+      capsShift: 'Ctrl',
     },
   },
   MetaLeft: {
@@ -568,6 +791,10 @@ const KEYS_DATA = {
       capsShift: 'Win',
     },
     ru: {
+      lowerCase: 'Win',
+      caps: 'Win',
+      shift: 'Win',
+      capsShift: 'Win',
     },
   },
   AltLeft: {
@@ -578,6 +805,10 @@ const KEYS_DATA = {
       capsShift: 'Alt',
     },
     ru: {
+      lowerCase: 'Alt',
+      caps: 'Alt',
+      shift: 'Alt',
+      capsShift: 'Alt',
     },
   },
   Space: {
@@ -588,6 +819,10 @@ const KEYS_DATA = {
       capsShift: '',
     },
     ru: {
+      lowerCase: '',
+      caps: '',
+      shift: '',
+      capsShift: '',
     },
   },
   AltRight: {
@@ -598,6 +833,10 @@ const KEYS_DATA = {
       capsShift: 'Alt',
     },
     ru: {
+      lowerCase: 'Alt',
+      caps: 'Alt',
+      shift: 'Alt',
+      capsShift: 'Alt',
     },
   },
   ArrowLeft: {
@@ -608,6 +847,10 @@ const KEYS_DATA = {
       capsShift: '&#x25C4;',
     },
     ru: {
+      lowerCase: '&#x25C4;',
+      caps: '&#x25C4;',
+      shift: '&#x25C4;',
+      capsShift: '&#x25C4;',
     },
   },
   ArrowDown: {
@@ -618,6 +861,10 @@ const KEYS_DATA = {
       capsShift: '&#x25BC;',
     },
     ru: {
+      lowerCase: '&#x25BC;',
+      caps: '&#x25BC;',
+      shift: '&#x25BC;',
+      capsShift: '&#x25BC;',
     },
   },
   ArrowRight: {
@@ -628,6 +875,10 @@ const KEYS_DATA = {
       capsShift: '&#x25BA;',
     },
     ru: {
+      lowerCase: '&#x25BA;',
+      caps: '&#x25BA;',
+      shift: '&#x25BA;',
+      capsShift: '&#x25BA;',
     },
   },
   ControlRight: {
@@ -638,6 +889,10 @@ const KEYS_DATA = {
       capsShift: 'Ctrl',
     },
     ru: {
+      lowerCase: 'Ctrl',
+      caps: 'Ctrl',
+      shift: 'Ctrl',
+      capsShift: 'Ctrl',
     },
   },
 };
