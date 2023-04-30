@@ -1,5 +1,6 @@
-const KEYS_DATA = {
-  Backquote: {
+const KEYS_DATA = [
+  {
+    code: 'Backquote',
     en: {
       lowerCase: '`',
       caps: '`',
@@ -13,7 +14,8 @@ const KEYS_DATA = {
       capsShift: 'ё',
     },
   },
-  Digit1: {
+  {
+    code: 'Digit1',
     en: {
       lowerCase: '1',
       caps: '1',
@@ -27,7 +29,8 @@ const KEYS_DATA = {
       capsShift: '!',
     },
   },
-  Digit2: {
+  {
+    code: 'Digit2',
     en: {
       lowerCase: '2',
       caps: '2',
@@ -41,7 +44,8 @@ const KEYS_DATA = {
       capsShift: '"',
     },
   },
-  Digit3: {
+  {
+    code: 'Digit3',
     en: {
       lowerCase: '3`',
       caps: '3',
@@ -55,7 +59,8 @@ const KEYS_DATA = {
       capsShift: '№',
     },
   },
-  Digit4: {
+  {
+    code: 'Digit4',
     en: {
       lowerCase: '4',
       caps: '4',
@@ -69,7 +74,8 @@ const KEYS_DATA = {
       capsShift: ';',
     },
   },
-  Digit5: {
+  {
+    code: 'Digit5',
     en: {
       lowerCase: '5',
       caps: '5',
@@ -83,7 +89,8 @@ const KEYS_DATA = {
       capsShift: '%',
     },
   },
-  Digit6: {
+  {
+    code: 'Digit6',
     en: {
       lowerCase: '6',
       caps: '6',
@@ -97,7 +104,8 @@ const KEYS_DATA = {
       capsShift: ':',
     },
   },
-  Digit7: {
+  {
+    code: 'Digit7',
     en: {
       lowerCase: '7',
       caps: '7',
@@ -111,7 +119,8 @@ const KEYS_DATA = {
       capsShift: '?',
     },
   },
-  Digit8: {
+  {
+    code: 'Digit8',
     en: {
       lowerCase: '8',
       caps: '8',
@@ -125,7 +134,8 @@ const KEYS_DATA = {
       capsShift: '*',
     },
   },
-  Digit9: {
+  {
+    code: 'Digit9',
     en: {
       lowerCase: '9',
       caps: '9',
@@ -139,7 +149,8 @@ const KEYS_DATA = {
       capsShift: '(',
     },
   },
-  Digit0: {
+  {
+    code: 'Digit0',
     en: {
       lowerCase: '0',
       caps: '0',
@@ -153,7 +164,8 @@ const KEYS_DATA = {
       capsShift: ')',
     },
   },
-  Minus: {
+  {
+    code: 'Minus',
     en: {
       lowerCase: '-',
       caps: '-',
@@ -167,7 +179,8 @@ const KEYS_DATA = {
       capsShift: '_',
     },
   },
-  Equal: {
+  {
+    code: 'Equal',
     en: {
       lowerCase: '=',
       caps: '=',
@@ -181,7 +194,8 @@ const KEYS_DATA = {
       capsShift: '+',
     },
   },
-  Backspace: {
+  {
+    code: 'Backspace',
     en: {
       lowerCase: 'Backspace',
       caps: 'Backspace',
@@ -195,7 +209,8 @@ const KEYS_DATA = {
       capsShift: 'Backspace',
     },
   },
-  Tab: {
+  {
+    code: 'Tab',
     en: {
       lowerCase: 'Tab',
       caps: 'Tab',
@@ -209,7 +224,8 @@ const KEYS_DATA = {
       capsShift: 'Tab',
     },
   },
-  KeyQ: {
+  {
+    code: 'KeyQ',
     en: {
       lowerCase: 'q',
       caps: 'Q',
@@ -223,7 +239,8 @@ const KEYS_DATA = {
       capsShift: 'й',
     },
   },
-  KeyW: {
+  {
+    code: 'KeyW',
     en: {
       lowerCase: 'w',
       caps: 'W',
@@ -237,7 +254,8 @@ const KEYS_DATA = {
       capsShift: 'ц',
     },
   },
-  KeyE: {
+  {
+    code: 'KeyE',
     en: {
       lowerCase: 'e',
       caps: 'E',
@@ -251,7 +269,8 @@ const KEYS_DATA = {
       capsShift: 'У',
     },
   },
-  KeyR: {
+  {
+    code: 'KeyR',
     en: {
       lowerCase: 'r',
       caps: 'R',
@@ -265,7 +284,8 @@ const KEYS_DATA = {
       capsShift: 'к',
     },
   },
-  KeyT: {
+  {
+    code: 'KeyT',
     en: {
       lowerCase: 't',
       caps: 'T',
@@ -279,7 +299,8 @@ const KEYS_DATA = {
       capsShift: 'е',
     },
   },
-  KeyY: {
+  {
+    code: 'KeyY',
     en: {
       lowerCase: 'y',
       caps: 'Y',
@@ -293,7 +314,8 @@ const KEYS_DATA = {
       capsShift: 'н',
     },
   },
-  KeyU: {
+  {
+    code: 'KeyU',
     en: {
       lowerCase: 'u',
       caps: 'U',
@@ -307,7 +329,8 @@ const KEYS_DATA = {
       capsShift: 'г',
     },
   },
-  KeyI: {
+  {
+    code: 'KeyI',
     en: {
       lowerCase: 'i',
       caps: 'I',
@@ -321,7 +344,8 @@ const KEYS_DATA = {
       capsShift: 'ш',
     },
   },
-  KeyO: {
+  {
+    code: 'KeyO',
     en: {
       lowerCase: 'o',
       caps: 'O',
@@ -335,7 +359,8 @@ const KEYS_DATA = {
       capsShift: 'щ',
     },
   },
-  KeyP: {
+  {
+    code: 'KeyP',
     en: {
       lowerCase: 'p',
       caps: 'P',
@@ -349,7 +374,8 @@ const KEYS_DATA = {
       capsShift: 'з',
     },
   },
-  BracketLeft: {
+  {
+    code: 'BracketLeft',
     en: {
       lowerCase: '[',
       caps: '[',
@@ -363,7 +389,8 @@ const KEYS_DATA = {
       capsShift: 'х',
     },
   },
-  BracketRight: {
+  {
+    code: 'BracketRight',
     en: {
       lowerCase: ']',
       caps: ']',
@@ -377,7 +404,8 @@ const KEYS_DATA = {
       capsShift: 'ъ',
     },
   },
-  Backslash: {
+  {
+    code: 'Backslash',
     en: {
       lowerCase: '\\',
       caps: '\\',
@@ -391,7 +419,8 @@ const KEYS_DATA = {
       capsShift: '/',
     },
   },
-  Delete: {
+  {
+    code: 'Delete',
     en: {
       lowerCase: 'Delete',
       caps: 'Delete',
@@ -405,7 +434,8 @@ const KEYS_DATA = {
       capsShift: 'Delete',
     },
   },
-  CapsLock: {
+  {
+    code: 'CapsLock',
     en: {
       lowerCase: 'Caps Lock',
       caps: 'Caps Lock',
@@ -419,7 +449,8 @@ const KEYS_DATA = {
       capsShift: 'Caps Lock',
     },
   },
-  KeyA: {
+  {
+    code: 'KeyA',
     en: {
       lowerCase: 'a',
       caps: 'A',
@@ -433,7 +464,8 @@ const KEYS_DATA = {
       capsShift: 'ф',
     },
   },
-  KeyS: {
+  {
+    code: 'KeyS',
     en: {
       lowerCase: 's',
       caps: 'S',
@@ -447,7 +479,8 @@ const KEYS_DATA = {
       capsShift: 'ы',
     },
   },
-  KeyD: {
+  {
+    code: 'KeyD',
     en: {
       lowerCase: 'd',
       caps: 'D',
@@ -461,7 +494,8 @@ const KEYS_DATA = {
       capsShift: 'в',
     },
   },
-  KeyF: {
+  {
+    code: 'KeyF',
     en: {
       lowerCase: 'f',
       caps: 'F',
@@ -475,7 +509,8 @@ const KEYS_DATA = {
       capsShift: 'а',
     },
   },
-  KeyG: {
+  {
+    code: 'KeyG',
     en: {
       lowerCase: 'g',
       caps: 'G',
@@ -489,7 +524,8 @@ const KEYS_DATA = {
       capsShift: 'п',
     },
   },
-  KeyH: {
+  {
+    code: 'KeyH',
     en: {
       lowerCase: 'h',
       caps: 'H',
@@ -503,7 +539,8 @@ const KEYS_DATA = {
       capsShift: 'р',
     },
   },
-  KeyJ: {
+  {
+    code: 'KeyJ',
     en: {
       lowerCase: 'j',
       caps: 'J',
@@ -517,7 +554,8 @@ const KEYS_DATA = {
       capsShift: 'о',
     },
   },
-  KeyK: {
+  {
+    code: 'KeyK',
     en: {
       lowerCase: 'k',
       caps: 'K',
@@ -531,7 +569,8 @@ const KEYS_DATA = {
       capsShift: 'л',
     },
   },
-  KeyL: {
+  {
+    code: 'KeyL',
     en: {
       lowerCase: 'l',
       caps: 'L',
@@ -545,7 +584,8 @@ const KEYS_DATA = {
       capsShift: 'д',
     },
   },
-  Semicolon: {
+  {
+    code: 'Semicolon',
     en: {
       lowerCase: ';',
       caps: ';',
@@ -559,7 +599,8 @@ const KEYS_DATA = {
       capsShift: 'ж',
     },
   },
-  Quote: {
+  {
+    code: 'Quote',
     en: {
       lowerCase: '\'',
       caps: '\'',
@@ -573,7 +614,8 @@ const KEYS_DATA = {
       capsShift: 'э',
     },
   },
-  Enter: {
+  {
+    code: 'Enter',
     en: {
       lowerCase: 'Enter',
       caps: 'Enter',
@@ -587,7 +629,8 @@ const KEYS_DATA = {
       capsShift: 'Enter',
     },
   },
-  ShiftLeft: {
+  {
+    code: 'ShiftLeft',
     en: {
       lowerCase: 'Shift',
       caps: 'Shift',
@@ -601,7 +644,8 @@ const KEYS_DATA = {
       capsShift: 'Shift',
     },
   },
-  KeyZ: {
+  {
+    code: 'KeyZ',
     en: {
       lowerCase: 'z',
       caps: 'Z',
@@ -615,7 +659,8 @@ const KEYS_DATA = {
       capsShift: 'я',
     },
   },
-  KeyX: {
+  {
+    code: 'KeyX',
     en: {
       lowerCase: 'x',
       caps: 'X',
@@ -629,7 +674,8 @@ const KEYS_DATA = {
       capsShift: 'ч',
     },
   },
-  KeyC: {
+  {
+    code: 'KeyC',
     en: {
       lowerCase: 'c',
       caps: 'C',
@@ -643,7 +689,8 @@ const KEYS_DATA = {
       capsShift: 'с',
     },
   },
-  KeyV: {
+  {
+    code: 'KeyV',
     en: {
       lowerCase: 'v',
       caps: 'V',
@@ -657,7 +704,8 @@ const KEYS_DATA = {
       capsShift: 'м',
     },
   },
-  KeyB: {
+  {
+    code: 'KeyB',
     en: {
       lowerCase: 'b',
       caps: 'B',
@@ -671,7 +719,8 @@ const KEYS_DATA = {
       capsShift: 'и',
     },
   },
-  KeyN: {
+  {
+    code: 'KeyN',
     en: {
       lowerCase: 'n',
       caps: 'N',
@@ -685,7 +734,8 @@ const KEYS_DATA = {
       capsShift: 'т',
     },
   },
-  KeyM: {
+  {
+    code: 'KeyM',
     en: {
       lowerCase: 'm',
       caps: 'M',
@@ -699,7 +749,8 @@ const KEYS_DATA = {
       capsShift: 'ь',
     },
   },
-  Comma: {
+  {
+    code: 'Comma',
     en: {
       lowerCase: ',',
       caps: ',',
@@ -713,7 +764,8 @@ const KEYS_DATA = {
       capsShift: 'б',
     },
   },
-  Period: {
+  {
+    code: 'Period',
     en: {
       lowerCase: '.',
       caps: '.',
@@ -727,7 +779,8 @@ const KEYS_DATA = {
       capsShift: 'ю',
     },
   },
-  Slash: {
+  {
+    code: 'Slash',
     en: {
       lowerCase: '/',
       caps: '/',
@@ -741,7 +794,8 @@ const KEYS_DATA = {
       capsShift: ',',
     },
   },
-  ArrowUp: {
+  {
+    code: 'ArrowUp',
     en: {
       lowerCase: '&#x25B2;',
       caps: '&#x25B2;',
@@ -755,7 +809,8 @@ const KEYS_DATA = {
       capsShift: '&#x25B2;',
     },
   },
-  ShiftRight: {
+  {
+    code: 'ShiftRight',
     en: {
       lowerCase: 'Shift',
       caps: 'Shift',
@@ -769,7 +824,8 @@ const KEYS_DATA = {
       capsShift: 'Shift',
     },
   },
-  ControlLeft: {
+  {
+    code: 'ControlLeft',
     en: {
       lowerCase: 'Ctrl',
       caps: 'Ctrl',
@@ -783,7 +839,8 @@ const KEYS_DATA = {
       capsShift: 'Ctrl',
     },
   },
-  MetaLeft: {
+  {
+    code: 'MetaLeft',
     en: {
       lowerCase: 'Win',
       caps: 'Win',
@@ -797,7 +854,8 @@ const KEYS_DATA = {
       capsShift: 'Win',
     },
   },
-  AltLeft: {
+  {
+    code: 'AltLeft',
     en: {
       lowerCase: 'Alt',
       caps: 'Alt',
@@ -811,7 +869,8 @@ const KEYS_DATA = {
       capsShift: 'Alt',
     },
   },
-  Space: {
+  {
+    code: 'Space',
     en: {
       lowerCase: '',
       caps: '',
@@ -825,7 +884,8 @@ const KEYS_DATA = {
       capsShift: '',
     },
   },
-  AltRight: {
+  {
+    code: 'AltRight',
     en: {
       lowerCase: 'Alt',
       caps: 'Alt',
@@ -839,7 +899,8 @@ const KEYS_DATA = {
       capsShift: 'Alt',
     },
   },
-  ArrowLeft: {
+  {
+    code: 'ArrowLeft',
     en: {
       lowerCase: '&#x25C4;',
       caps: '&#x25C4;',
@@ -853,7 +914,8 @@ const KEYS_DATA = {
       capsShift: '&#x25C4;',
     },
   },
-  ArrowDown: {
+  {
+    code: 'ArrowDown',
     en: {
       lowerCase: '&#x25BC;',
       caps: '&#x25BC;',
@@ -867,7 +929,8 @@ const KEYS_DATA = {
       capsShift: '&#x25BC;',
     },
   },
-  ArrowRight: {
+  {
+    code: 'ArrowRight',
     en: {
       lowerCase: '&#x25BA;',
       caps: '&#x25BA;',
@@ -881,7 +944,8 @@ const KEYS_DATA = {
       capsShift: '&#x25BA;',
     },
   },
-  ControlRight: {
+  {
+    code: 'ControlRight',
     en: {
       lowerCase: 'Ctrl',
       caps: 'Ctrl',
@@ -895,6 +959,6 @@ const KEYS_DATA = {
       capsShift: 'Ctrl',
     },
   },
-};
+];
 
 export default KEYS_DATA;
