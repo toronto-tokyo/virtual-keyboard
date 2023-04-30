@@ -18,6 +18,7 @@ class Layout {
     this.screen = new Screen(this.container);
     this.keyboard = new Keyboard(this.container);
     this.keyboard.addKeys();
+    this.keyboard.pressKeys();
   }
 }
 

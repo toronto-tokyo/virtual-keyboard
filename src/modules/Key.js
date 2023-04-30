@@ -5,6 +5,7 @@ class Key {
     this.container = container;
     this.element = document.createElement('div');
     this.element.className = 'key';
+    this.element.setAttribute('data-code', `${keyData.code}`);
     if (SPECIAL_KEYS.nonSymbolKeys.includes(keyData.code)) {
       this.element.classList.add(`${keyData.code.toLowerCase()}`);
       this.element.classList.add('key--special');
