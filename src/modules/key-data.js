@@ -47,7 +47,7 @@ const KEYS_DATA = [
   {
     code: 'Digit3',
     en: {
-      lowerCase: '3`',
+      lowerCase: '3',
       caps: '3',
       shift: '#',
       capsShift: '#',
