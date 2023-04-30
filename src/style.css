@@ -34,3 +34,91 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+.body{
+  background-color: rgba(176, 176, 176, 0.1);
+  font-family: "Trebuchet MS", "Helvetica", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 737px;
+  padding: 10px;
+}
+
+.title {
+  margin: 20px 0 40px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(255, 111, 0);
+}
+
+.text-field {
+  margin-bottom: 20px;
+}
+
+.text-field__content {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.keyboard {
+  border: 3px solid black;
+  padding: 5px 3px;
+  border-radius: 5px;
+  background-color: rgb(168, 168, 168);
+}
+
+.keyboard__row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.key{
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 3px;
+  margin: 0px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: rgb(99, 99, 99);
+}
+
+.key--special {
+  background-color: #414141;
+  font-weight: 700;
+}
+
+.backspace,
+.capslock,
+.shiftleft {
+  width: 100px;
+}
+
+.tab {
+  width: 50px;
+}
+
+.delete {
+  width: 44px;
+}
+
+.enter,
+.shiftright {
+  width: 86px;
+}
+
+.space {
+  width: 330px;
+}
+
+.hidden {
+  display: none;
+}
