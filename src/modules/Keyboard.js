@@ -1,7 +1,10 @@
 import Key from './Key';
+import KEYS_DATA from './key-data';
 
 class Keyboard {
   rows = [];
+
+  keys = [];
 
   constructor(container) {
     this.container = container;
@@ -17,10 +20,16 @@ class Keyboard {
   }
 
   addKeys() {
-    for (let i = 0; i < 4; i += 1) {
-      for (let j = 0; j < 10; j += 1) {
-        const key = new Key(this.rows[i]);
-      }
+    let rowIndex = 0;
+    let keyIndex = 0;
+    while (keyIndex < KEYS_DATA.length) {
+      if (keyIndex > 13 && keyIndex < 28) rowIndex = 1;
+      if (keyIndex > 28 && keyIndex < 41) rowIndex = 2;
+      if (keyIndex > 41 && keyIndex < 54) rowIndex = 3;
+      if (keyIndex > 54) rowIndex = 4;
+      const key = new Key(this.rows[rowIndex], KEYS_DATA[keyIndex]);
+      this.keys.push(key);
+      keyIndex += 1;
     }
   }
 }
