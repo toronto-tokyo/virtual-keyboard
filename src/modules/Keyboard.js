@@ -28,6 +28,7 @@ class Keyboard {
     this.setCurrentLanguage();
     this.getCurrentLanguage();
     this.addKeys();
+    this.click();
     window.addEventListener('load', () => {
       this.wrapper.classList.remove('hidden');
     });
@@ -50,6 +51,7 @@ class Keyboard {
         keyIndex += 1;
       }
       this.pressKeys();
+      this.print();
     });
   }
 
@@ -100,7 +102,6 @@ class Keyboard {
       const eCode = e.code;
       const element = this.keyElements.find((el) => el.dataset.code === eCode);
       element?.classList.add('active');
-      this.print(e);
     });
 
     document.addEventListener('keyup', (e) => {
@@ -157,27 +158,95 @@ class Keyboard {
     });
   }
 
-  print(e) {
-    const inputArea = document.querySelector('textarea');
-    if (!SPECIAL_KEYS.nonSymbolKeys.includes(e.code) || e.code === 'Space') {
-      const key = this.keyElements.find((el) => el.dataset.code === e.code);
-      if (key) {
-        const currentLangSymbols = this.currentLanguage === 'en' ? key.querySelector('.key__en') : key.querySelector('.key__ru');
-        const char = Array.from(currentLangSymbols.children).find((el) => !el.className.includes('hidden'));
-        this.text.push(char.textContent);
+  print() {
+    this.inputArea = document.querySelector('textarea');
+    this.inputArea.addEventListener('input', (e) => e.preventDefault());
+    document.addEventListener('keydown', (e) => {
+      this.inputArea.classList.add('hide-carret');
+      e.preventDefault();
+      if (!SPECIAL_KEYS.nonSymbolKeys.includes(e.code) || e.code === 'Space') {
+        const key = this.keyElements.find((el) => el.dataset.code === e.code);
+        if (key) {
+          const currentLangSymbols = this.currentLanguage === 'en' ? key.querySelector('.key__en') : key.querySelector('.key__ru');
+          const char = Array.from(currentLangSymbols.children).find((el) => !el.className.includes('hidden'));
+          if (this.inputArea.className.includes('focus')) {
+            this.text.splice(this.selectionIndex, 0, char.textContent);
+            this.selectionIndex += 1;
+          } else {
+            this.text.push(char.textContent);
+          }
+        }
       }
-    }
-    if (e.code === 'Backspace') {
-      this.text.pop();
-    }
-    if (e.code === 'Enter') {
-      this.text.push('\n');
-    }
-    if (e.code === 'Tab') {
-      this.text.push('\t');
-    }
+      if (e.code === 'Backspace') {
+        if (this.inputArea.className.includes('focus')) {
+          if (this.selectionIndex - 1 >= 0) {
+            this.text.splice(this.selectionIndex - 1, 1);
+            this.selectionIndex = this.selectionIndex - 1 < 0 ? 0 : this.selectionIndex - 1;
+          }
+        } else {
+          this.text.pop();
+        }
+      }
+      if (e.code === 'Enter') {
+        if (this.inputArea.className.includes('focus')) {
+          this.text.splice(this.selectionIndex, 0, '\n');
+          this.selectionIndex += 1;
+        } else {
+          this.text.push('\n');
+        }
+      }
+      if (e.code === 'Tab') {
+        if (this.inputArea.className.includes('focus')) {
+          this.text.splice(this.selectionIndex, 0, '\t');
+          this.selectionIndex += 1;
+        } else {
+          this.text.push('\t');
+        }
+      }
+      if (e.code === 'Delete') {
+        if (this.inputArea.className.includes('focus')) {
+          this.text.splice(this.selectionIndex, 1);
+          this.selectionIndex -= 0;
+        }
+      }
+      this.inputArea.value = this.text.join('');
+    });
+    document.addEventListener('keyup', (e) => {
+      e.preventDefault();
+      this.inputArea.classList.remove('hide-carret');
+      if (this.inputArea.className.includes('focus')) {
+        if (!SPECIAL_KEYS.nonSymbolKeys.includes(e.code) || e.code === 'Space' || e.code === 'Backspace' || e.code === 'Delete' || e.code === 'Enter' || e.code === 'Tab') {
+          this.inputArea.selectionStart = this.selectionIndex;
+          this.inputArea.selectionEnd = this.selectionIndex;
+          this.inputArea.setSelectionRange(this.selectionIndex, this.selectionIndex);
+        }
+      }
+    });
+  }
 
-    inputArea.value = this.text.join('');
+  click() {
+    window.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.removeFocus();
+      if (e.target.closest('textarea')) {
+        this.selectionIndex = this.inputArea.selectionStart;
+        this.inputArea.classList.add('focus');
+      }
+      if (!e.target.closest('textarea') && !e.target.closest('.keyboard')) {
+        this.inputArea.classList.remove('focus');
+        this.inputArea.blur();
+      }
+    }, true);
+  }
+
+  removeFocus() {
+    document.querySelector('textarea').addEventListener('blur', () => {
+      if (this.inputArea.className.includes('focus')) {
+        this.inputArea.focus();
+      } else {
+        this.inputArea.blur();
+      }
+    });
   }
 }
 

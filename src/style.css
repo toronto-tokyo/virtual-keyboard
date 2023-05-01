@@ -149,3 +149,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   margin: 15px;
   font-size: 1.3rem;
 }
+
+.hide-carret{
+  caret-color: transparent;
+}
