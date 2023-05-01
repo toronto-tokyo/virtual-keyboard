@@ -52,6 +52,7 @@ class Keyboard {
       }
       this.pressKeys();
       this.print();
+      this.clickKeyboard();
     });
   }
 
@@ -222,6 +223,142 @@ class Keyboard {
         }
       }
     });
+  }
+
+  clickKeyboard() {
+    window.addEventListener('mousedown', (event) => {
+      if (event.target.closest('textarea')) {
+        this.inputArea.focus();
+      }
+      if (event.target.closest('.key')) {
+        const key = event.target.closest('.key');
+
+        const { code } = key.dataset;
+        const e = {
+          code,
+        };
+        if (e.code === 'CapsLock') this.caps = !this.caps;
+        if (e.code === 'CapsLock' && this.caps) {
+          this.keyElements.forEach((el) => {
+            const charElements = Array.from(el.querySelectorAll('.key__char'));
+            charElements.forEach((elem) => {
+              elem.classList.add('hidden');
+              if (elem.className.includes('caps') && !elem.className.includes('shift')) elem.classList.remove('hidden');
+            });
+          });
+        }
+        if (e.code === 'CapsLock' && !this.caps) {
+          this.keyElements.forEach((el) => {
+            const charElements = Array.from(el.querySelectorAll('.key__char'));
+            charElements.forEach((elem) => {
+              elem.classList.add('hidden');
+              if (elem.className.includes('lowercase')) elem.classList.remove('hidden');
+            });
+          });
+        }
+        if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+          this.keyElements.forEach((el) => {
+            const charElements = Array.from(el.querySelectorAll('.key__char'));
+            charElements.forEach((elem) => {
+              elem.classList.add('hidden');
+              if (this.caps) {
+                if (elem.className.includes('capsshift')) elem.classList.remove('hidden');
+              } else if (elem.className.includes('shift') && !elem.className.includes('caps')) {
+                elem.classList.remove('hidden');
+              }
+            });
+          });
+        }
+
+        key?.classList.add('active');
+
+        this.inputArea.classList.add('hide-carret');
+        if (!SPECIAL_KEYS.nonSymbolKeys.includes(e.code) || e.code === 'Space') {
+          if (key) {
+            const currentLangSymbols = this.currentLanguage === 'en' ? key.querySelector('.key__en') : key.querySelector('.key__ru');
+            const char = Array.from(currentLangSymbols.children).find((el) => !el.className.includes('hidden'));
+            if (this.inputArea.className.includes('focus')) {
+              this.text.splice(this.selectionIndex, 0, char.textContent);
+              this.selectionIndex += 1;
+            } else {
+              this.text.push(char.textContent);
+            }
+          }
+        }
+        if (e.code === 'Backspace') {
+          if (this.inputArea.className.includes('focus')) {
+            if (this.selectionIndex - 1 >= 0) {
+              this.text.splice(this.selectionIndex - 1, 1);
+              this.selectionIndex = this.selectionIndex - 1 < 0 ? 0 : this.selectionIndex - 1;
+            }
+          } else {
+            this.text.pop();
+          }
+        }
+        if (e.code === 'Enter') {
+          if (this.inputArea.className.includes('focus')) {
+            this.text.splice(this.selectionIndex, 0, '\n');
+            this.selectionIndex += 1;
+          } else {
+            this.text.push('\n');
+          }
+        }
+        if (e.code === 'Tab') {
+          if (this.inputArea.className.includes('focus')) {
+            this.text.splice(this.selectionIndex, 0, '\t');
+            this.selectionIndex += 1;
+          } else {
+            this.text.push('\t');
+          }
+        }
+        if (e.code === 'Delete') {
+          if (this.inputArea.className.includes('focus')) {
+            this.text.splice(this.selectionIndex, 1);
+            this.selectionIndex -= 0;
+          }
+        }
+        this.inputArea.value = this.text.join('');
+      }
+    }, true);
+
+    window.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (event.target.closest('.key')) {
+        const key = event.target.closest('.key');
+
+        const { code } = key.dataset;
+        const e = {
+          code,
+        };
+
+        if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+          this.keyElements.forEach((el) => {
+            const charElements = Array.from(el.querySelectorAll('.key__char'));
+            charElements.forEach((elem) => {
+              elem.classList.add('hidden');
+              if (this.caps) {
+                if (elem.className.includes('caps') && !elem.className.includes('shift')) elem.classList.remove('hidden');
+              } else if (elem.className.includes('lowercase')) {
+                elem.classList.remove('hidden');
+              }
+            });
+          });
+        }
+        key?.classList.remove('active');
+        if (this.caps) {
+          document.querySelector('[data-code="CapsLock"]').classList.add('active');
+        }
+
+        this.inputArea.classList.remove('hide-carret');
+        if (this.inputArea.className.includes('focus')) {
+          if (!SPECIAL_KEYS.nonSymbolKeys.includes(e.code) || e.code === 'Space' || e.code === 'Backspace' || e.code === 'Delete' || e.code === 'Enter' || e.code === 'Tab') {
+            this.inputArea.selectionStart = this.selectionIndex;
+            this.inputArea.selectionEnd = this.selectionIndex;
+            this.inputArea.setSelectionRange(this.selectionIndex, this.selectionIndex);
+          }
+        }
+      }
+    }, true);
   }
 
   click() {
