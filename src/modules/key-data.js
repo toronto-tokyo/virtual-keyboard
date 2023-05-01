@@ -872,16 +872,16 @@ const KEYS_DATA = [
   {
     code: 'Space',
     en: {
-      lowerCase: '',
-      caps: '',
-      shift: '',
-      capsShift: '',
+      lowerCase: ' ',
+      caps: ' ',
+      shift: ' ',
+      capsShift: ' ',
     },
     ru: {
-      lowerCase: '',
-      caps: '',
-      shift: '',
-      capsShift: '',
+      lowerCase: ' ',
+      caps: ' ',
+      shift: ' ',
+      capsShift: ' ',
     },
   },
   {
