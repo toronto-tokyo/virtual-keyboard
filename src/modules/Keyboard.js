@@ -6,6 +6,10 @@ class Keyboard {
 
   keys = [];
 
+  languages = ['en', 'ru'];
+
+  currentLanguage = 'en';
+
   constructor(container) {
     this.container = container;
     this.wrapper = document.createElement('div');
@@ -39,6 +43,12 @@ class Keyboard {
     this.caps = false;
     document.addEventListener('keydown', (e) => {
       if (e.altKey || e.code === 'Tab') e.preventDefault();
+      if (e.ctrlKey && e.altKey) {
+        const langIndex = this.languages.indexOf(this.currentLanguage);
+        const nextLangIndex = this.languages[langIndex + 1] === undefined ? 0 : langIndex + 1;
+        this.currentLanguage = this.languages[nextLangIndex];
+        this.changeLanguage();
+      }
       if (e.code === 'CapsLock') this.caps = !this.caps;
       if (e.code === 'CapsLock' && this.caps) {
         this.keyElements.forEach((el) => {
@@ -99,6 +109,21 @@ class Keyboard {
         document.querySelector('[data-code="CapsLock"]').classList.add('active');
       }
     });
+  }
+
+  changeLanguage() {
+    if (this.currentLanguage === 'en') {
+      this.keyElements.forEach((el) => {
+        el.querySelector('.key__en').classList.remove('hidden');
+        el.querySelector('.key__ru').classList.add('hidden');
+      });
+    }
+    if (this.currentLanguage === 'ru') {
+      this.keyElements.forEach((el) => {
+        el.querySelector('.key__en').classList.add('hidden');
+        el.querySelector('.key__ru').classList.remove('hidden');
+      });
+    }
   }
 }
 
