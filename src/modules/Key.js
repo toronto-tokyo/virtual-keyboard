@@ -31,7 +31,7 @@ class Key {
         const objectKeys = Object.keys(keyData.en);
         for (let i = 0; i < objectKeys.length; i += 1) {
           const keyChar = document.createElement('span');
-          keyChar.className = 'key__char';
+          keyChar.className = `key__char ${objectKeys[i].toLowerCase()}`;
           if (i !== 0) keyChar.classList.add('hidden');
           if (SPECIAL_KEYS.arrowKeys.includes(keyData.code)) {
             keyChar.innerHTML = keyData.en[objectKeys[i]];
@@ -45,6 +45,8 @@ class Key {
         const objectKeys = Object.keys(keyData.ru);
         for (let i = 0; i < objectKeys.length; i += 1) {
           const keyChar = document.createElement('span');
+          keyChar.className = `key__char ${objectKeys[i].toLowerCase()}`;
+          if (i !== 0) keyChar.classList.add('hidden');
           if (SPECIAL_KEYS.arrowKeys.includes(keyData.code)) {
             keyChar.innerHTML = keyData.ru[objectKeys[i]];
           } else {

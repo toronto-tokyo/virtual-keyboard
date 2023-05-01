@@ -36,16 +36,68 @@ class Keyboard {
 
   pressKeys() {
     this.keyElements = Array.from(document.querySelectorAll('.key'));
+    this.caps = false;
     document.addEventListener('keydown', (e) => {
       if (e.altKey || e.code === 'Tab') e.preventDefault();
+      if (e.code === 'CapsLock') this.caps = !this.caps;
+      if (e.code === 'CapsLock' && this.caps) {
+        this.keyElements.forEach((el) => {
+          const charElements = Array.from(el.querySelectorAll('.key__char'));
+          charElements.forEach((elem) => {
+            elem.classList.add('hidden');
+            if (elem.className.includes('caps') && !elem.className.includes('shift')) elem.classList.remove('hidden');
+          });
+        });
+      } else {
+        this.keyElements.forEach((el) => {
+          const charElements = Array.from(el.querySelectorAll('.key__char'));
+          charElements.forEach((elem) => {
+            elem.classList.add('hidden');
+            if (elem.className.includes('lowercase')) elem.classList.remove('hidden');
+          });
+        });
+      }
+      if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+        this.keyElements.forEach((el) => {
+          const charElements = Array.from(el.querySelectorAll('.key__char'));
+          charElements.forEach((elem) => {
+            elem.classList.add('hidden');
+            if (this.caps) {
+              if (elem.className.includes('capsshift')) elem.classList.remove('hidden');
+            } else if (elem.className.includes('shift') && !elem.className.includes('caps')) {
+              elem.classList.remove('hidden');
+            }
+          });
+        });
+      }
+
       const eCode = e.code;
       const element = this.keyElements.find((el) => el.dataset.code === eCode);
       element?.classList.add('active');
     });
+
     document.addEventListener('keyup', (e) => {
       const eCode = e.code;
+
+      if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+        this.keyElements.forEach((el) => {
+          const charElements = Array.from(el.querySelectorAll('.key__char'));
+          charElements.forEach((elem) => {
+            elem.classList.add('hidden');
+            if (this.caps) {
+              if (elem.className.includes('caps') && !elem.className.includes('shift')) elem.classList.remove('hidden');
+            } else if (elem.className.includes('lowercase')) {
+              elem.classList.remove('hidden');
+            }
+          });
+        });
+      }
+
       const element = this.keyElements.find((el) => el.dataset.code === eCode);
       element?.classList.remove('active');
+      if (this.caps) {
+        document.querySelector('[data-code="CapsLock"]').classList.add('active');
+      }
     });
   }
 }
