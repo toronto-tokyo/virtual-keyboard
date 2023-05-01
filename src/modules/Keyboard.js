@@ -1,5 +1,6 @@
 import Key from './Key';
 import KEYS_DATA from './key-data';
+import SPECIAL_KEYS from './special-keys-data';
 
 class Keyboard {
   rows = [];
@@ -9,6 +10,8 @@ class Keyboard {
   languages = ['en', 'ru'];
 
   currentLanguage = 'en';
+
+  text = [];
 
   constructor(container) {
     this.container = container;
@@ -70,7 +73,8 @@ class Keyboard {
             if (elem.className.includes('caps') && !elem.className.includes('shift')) elem.classList.remove('hidden');
           });
         });
-      } else {
+      }
+      if (e.code === 'CapsLock' && !this.caps) {
         this.keyElements.forEach((el) => {
           const charElements = Array.from(el.querySelectorAll('.key__char'));
           charElements.forEach((elem) => {
@@ -96,6 +100,7 @@ class Keyboard {
       const eCode = e.code;
       const element = this.keyElements.find((el) => el.dataset.code === eCode);
       element?.classList.add('active');
+      this.print(e);
     });
 
     document.addEventListener('keyup', (e) => {
@@ -150,6 +155,27 @@ class Keyboard {
         this.currentLanguage = localStorage.getItem('lang');
       }
     });
+  }
+
+  print(e) {
+    const inputArea = document.querySelector('textarea');
+    if (!SPECIAL_KEYS.nonSymbolKeys.includes(e.code) || e.code === 'Space') {
+      const key = this.keyElements.find((el) => el.dataset.code === e.code);
+      const currentLangSymbols = this.currentLanguage === 'en' ? key.querySelector('.key__en') : key.querySelector('.key__ru');
+      const char = Array.from(currentLangSymbols.children).find((el) => !el.className.includes('hidden'));
+      this.text.push(char.textContent);
+      inputArea.value = this.text.join('');
+    }
+    if (e.code === 'Backspace') {
+      this.text.pop();
+      inputArea.value = this.text.join('');
+    }
+    if (e.code === 'Enter') {
+      this.text.push('\n');
+    }
+    if (e.code === 'Tab') {
+      this.text.push('\t');
+    }
   }
 }
 
