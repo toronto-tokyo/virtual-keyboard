@@ -63,6 +63,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   width: 100%;
   border: 1px solid black;
   border-radius: 5px;
+  font-size: 1.4rem;
+  padding: 5px;
+}
+
+.text-field__content:focus {
+  border: 2px solid black;
+  margin-bottom: -2px;
 }
 
 .keyboard {
