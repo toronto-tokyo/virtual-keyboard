@@ -130,3 +130,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .hidden {
   display: none;
 }
+
+.addition-info {
+  margin: 30px 0;
+}
+
+.addition-info__content{
+  text-align: center;
+  margin: 15px;
+  font-size: 1.3rem;
+}
