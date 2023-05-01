@@ -89,6 +89,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   justify-content: center;
   color: #fff;
   background-color: rgb(99, 99, 99);
+  cursor: pointer;
+  user-select: none;
 }
 
 .active {
