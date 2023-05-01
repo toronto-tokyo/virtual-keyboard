@@ -161,14 +161,14 @@ class Keyboard {
     const inputArea = document.querySelector('textarea');
     if (!SPECIAL_KEYS.nonSymbolKeys.includes(e.code) || e.code === 'Space') {
       const key = this.keyElements.find((el) => el.dataset.code === e.code);
-      const currentLangSymbols = this.currentLanguage === 'en' ? key.querySelector('.key__en') : key.querySelector('.key__ru');
-      const char = Array.from(currentLangSymbols.children).find((el) => !el.className.includes('hidden'));
-      this.text.push(char.textContent);
-      inputArea.value = this.text.join('');
+      if (key) {
+        const currentLangSymbols = this.currentLanguage === 'en' ? key.querySelector('.key__en') : key.querySelector('.key__ru');
+        const char = Array.from(currentLangSymbols.children).find((el) => !el.className.includes('hidden'));
+        this.text.push(char.textContent);
+      }
     }
     if (e.code === 'Backspace') {
       this.text.pop();
-      inputArea.value = this.text.join('');
     }
     if (e.code === 'Enter') {
       this.text.push('\n');
@@ -176,6 +176,8 @@ class Keyboard {
     if (e.code === 'Tab') {
       this.text.push('\t');
     }
+
+    inputArea.value = this.text.join('');
   }
 }
 
