@@ -35,16 +35,16 @@ class Keyboard {
   }
 
   pressKeys() {
-    const keyElements = Array.from(document.querySelectorAll('.key'));
+    this.keyElements = Array.from(document.querySelectorAll('.key'));
     document.addEventListener('keydown', (e) => {
       if (e.altKey || e.code === 'Tab') e.preventDefault();
       const eCode = e.code;
-      const element = keyElements.find((el) => el.dataset.code === eCode);
+      const element = this.keyElements.find((el) => el.dataset.code === eCode);
       element?.classList.add('active');
     });
     document.addEventListener('keyup', (e) => {
       const eCode = e.code;
-      const element = keyElements.find((el) => el.dataset.code === eCode);
+      const element = this.keyElements.find((el) => el.dataset.code === eCode);
       element?.classList.remove('active');
     });
   }
