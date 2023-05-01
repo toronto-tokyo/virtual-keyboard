@@ -1,7 +1,7 @@
 import SPECIAL_KEYS from './special-keys-data';
 
 class Key {
-  constructor(container, keyData) {
+  constructor(container, keyData, lang) {
     this.container = container;
     this.element = document.createElement('div');
     this.element.className = 'key';
@@ -17,7 +17,11 @@ class Key {
     this.keyEnContentWrapper.className = 'key__en';
     this.keyRuContentWrapper = document.createElement('span');
     this.keyRuContentWrapper.className = 'key__ru';
-    this.keyRuContentWrapper.classList.add('hidden');
+    if (lang === 'en') {
+      this.keyRuContentWrapper.classList.add('hidden');
+    } else if (lang === 'ru') {
+      this.keyEnContentWrapper.classList.add('hidden');
+    }
     this.keyData = keyData;
     this.addData(keyData);
     this.container.append(this.element);

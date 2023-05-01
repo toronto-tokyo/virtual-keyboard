@@ -15,7 +15,7 @@ class Layout {
 
   createElements() {
     this.additionInfo = document.createElement('div');
-    this.additionInfo.className = 'addition-info';
+    this.additionInfo.className = 'addition-info hidden';
     this.additionInfoSystem = document.createElement('p');
     this.additionInfoSwitchLang = document.createElement('p');
     this.additionInfoSystem.className = 'addition-info__content';
@@ -28,8 +28,9 @@ class Layout {
     this.screen = new Screen(this.container);
     this.keyboard = new Keyboard(this.container);
     this.container.append(this.additionInfo);
-    this.keyboard.addKeys();
-    this.keyboard.pressKeys();
+    window.addEventListener('load', () => {
+      this.additionInfo.classList.remove('hidden');
+    });
   }
 }
 
