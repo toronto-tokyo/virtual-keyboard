@@ -98,19 +98,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
   background-color: rgb(99, 99, 99);
   cursor: pointer;
   user-select: none;
+  box-shadow: inset;
+  box-shadow: 1px 3px 1px 0px rgba(255, 255, 255, 1);
+  transform: translate(0);
+  transition: 0.15s;
 }
 
 .active {
-  background-color: #ff831d;
+  transform: translate(1px, 3px);
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
 }
 
 .key--special {
   background-color: #414141;
   font-weight: 700;
-}
-
-.key--special.active {
-  background-color: #ff831d;
 }
 
 .backspace,
