@@ -1,0 +1,156 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+.body{
+  background-color: rgba(176, 176, 176, 0.1);
+  font-family: "Trebuchet MS", "Helvetica", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 737px;
+  padding: 10px;
+}
+
+.title {
+  margin: 20px 0 40px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(255, 111, 0);
+}
+
+.text-field {
+  margin-bottom: 20px;
+}
+
+.text-field__content {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  padding: 5px;
+}
+
+.text-field__content:focus {
+  border: 2px solid black;
+  margin: -1px;
+}
+
+.keyboard {
+  border: 3px solid black;
+  padding: 5px 3px;
+  border-radius: 5px;
+  background-color: rgb(168, 168, 168);
+}
+
+.keyboard__row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.key{
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 3px;
+  margin: 0px 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: rgb(99, 99, 99);
+  cursor: pointer;
+  user-select: none;
+  box-shadow: inset;
+  box-shadow: 1px 3px 1px 0px rgba(255, 255, 255, 1);
+  transform: translate(0);
+  transition: 0.15s;
+}
+
+.active {
+  transform: translate(1px, 3px);
+  box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+}
+
+.key--special {
+  background-color: #414141;
+  font-weight: 700;
+}
+
+.backspace,
+.capslock,
+.shiftleft {
+  width: 100px;
+}
+
+.tab {
+  width: 50px;
+}
+
+.delete {
+  width: 44px;
+}
+
+.enter,
+.shiftright {
+  width: 86px;
+}
+
+.space {
+  width: 330px;
+}
+
+.hidden {
+  display: none;
+}
+
+.addition-info {
+  margin: 30px 0;
+}
+
+.addition-info__content{
+  text-align: center;
+  margin: 15px;
+  font-size: 1.3rem;
+}
+
+.hide-carret{
+  caret-color: transparent;
+}
